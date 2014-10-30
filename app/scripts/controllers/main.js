@@ -8,10 +8,6 @@
  * Controller of the blloonSearchApp
  */
 angular.module('blloonSearchApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, Book) {
+    $scope.books = Book.query({ query: 'angular' });
   });
