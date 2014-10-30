@@ -8,24 +8,36 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/discover.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="blloonSearchApp">
+  <body class="block--dark layout" ng-app="blloonSearchApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-        <h3 class="text-muted">blloon</h3>
+    <div class="wrapper">
+      <div class="wrapper__row wrapper__row--header">
+        <header class="header header--dark-background header--trans" data-nav-switch="600" role="banner">
+          <a class="logo" href="/">
+            <img alt="Blloon" src="/images/logo.svg">
+          </a>
+        </header>
+
       </div>
 
-      <div ng-view=""></div>
+      <div class='wrapper__row wrapper__row--body'>
+        <div class='wrapper__cell'>
+          <div class='main' role='main' ng-view=""></div>
+        </div>
+      </div>
     </div>
 
     <!-- build:js(.) scripts/oldieshim.js -->
