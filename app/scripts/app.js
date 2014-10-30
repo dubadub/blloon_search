@@ -10,6 +10,7 @@
  */
 angular
   .module('blloonSearchApp', [
+    'debounce',
     'ngAnimate',
     'ngResource',
     'ngRoute',

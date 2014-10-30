@@ -34,6 +34,22 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+*,*:before,*:after,input[type=search],input[type=search]:before,input[type=search]:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizng: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.logo,.panel,.pull-wrap,.freemium__ratio__slider__mark {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizng: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
 .wrapper {
   display: table;
   table-layout: fixed;

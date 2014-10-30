@@ -24,7 +24,7 @@
     <!-- Add your site or application content here -->
     <div class="wrapper">
       <div class="wrapper__row wrapper__row--header">
-        <header class="header header--dark-background header--trans" data-nav-switch="600" role="banner">
+        <header class="header header--dark-background header--trans" role="banner">
           <a class="logo" href="/">
             <img alt="Blloon" src="/images/logo.svg">
           </a>
@@ -55,6 +55,7 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="bower_components/ng-debounce/angular-debounce.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -63,6 +64,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/services/book.js"></script>
         <script src="scripts/directives/background-image.js"></script>
+        <script src="scripts/filters/to_puzzle.js"></script>
         <!-- endbuild -->
 </body>
 </html>

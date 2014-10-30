@@ -20,8 +20,7 @@ angular.module('blloonSearchApp')
             var img = $document[0].createElement('img');
             img.onload = function() {
               element.css({
-                backgroundImage: 'url(' + this.src + ')',
-                backgroundSize: 'cover'
+                backgroundImage: 'url(' + this.src + ')'
               });
               element.addClass('loaded');
             };

@@ -1,24 +1,27 @@
 
 <div class='search-section'>
+
   <div class="search-section__input">
-    <input class="input-control" type="text" ng-model="query" placeholder="Type to search...">
+    <input class="input-control"
+      debounce="500"
+      type="text"
+      ng-model="query"
+      placeholder="Type to search...">
   </div>
 
   <div class='search-section__content'>
-    Here are a few of our favourite reads. To browse our full range,
-    <a class="link--plain" href="http://staging.blloon.com/dl">
-      download Blloon
-    </a>
-    .
+    Here are a few of our favourite reads.
   </div>
+
   <div class='search-section__highlights highlights'>
-    <div class='feature highlights__box lime' ng-repeat="book in books">
-      <a class="book" href="">
+    <div class='highlights__box' ng-repeat="booksGroup in books | toPuzzle" ng-class="{ 'two-y': booksGroup.length == 2, 'feature lime': booksGroup.length == 1 }">
+      <a class="book" href="" ng-repeat="book in booksGroup">
         <div class='book-cover' background-image="book.medium_cover_image_url">
         </div>
       </a>
     </div>
   </div>
+
   <div class='search-section__cta'>
     <a class="btn btn--outline" href="http://staging.blloon.com/dl">
       Download Blloon
