@@ -17,6 +17,9 @@ $black_8: rgba(0,0,0,0.08);
 
 .search-section {
     text-align: center;
+    font-family: "Tiempos", Georgia, serif;
+    letter-spacing: -0.02em;
+    line-height: 1.65;
     .highlights {
         margin: 1.0em auto 2.0em;
         overflow: hidden;
@@ -148,6 +151,7 @@ $black_8: rgba(0,0,0,0.08);
     text-align: center;
     font-size: 1.5em;
     margin-bottom: 1.0em;
+    font: 112.5%/1.45 "Metric", Tahoma, sans-serif;
 
     .input-control {
         color: $color_mine_shaft_approx;
