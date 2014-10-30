@@ -16,7 +16,7 @@
   <div class='search-section__highlights highlights'>
     <div class='highlights__box' ng-repeat="booksGroup in books | toPuzzle" ng-class="{ 'two-y': booksGroup.length == 2, 'feature lime': booksGroup.length == 1 }">
       <a class="book" href="" ng-repeat="book in booksGroup">
-        <div class='book-cover' background-image="book.medium_cover_image_url">
+        <div class='book-cover' background-image="booksGroup.length == 1 ? book.medium_cover_image_url : book.small_cover_image_url">
         </div>
       </a>
     </div>
