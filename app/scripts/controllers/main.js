@@ -9,5 +9,7 @@
  */
 angular.module('blloonSearchApp')
   .controller('MainCtrl', function ($scope, Book) {
-    $scope.books = Book.query({ query: $scope.query });
+    $scope.$watch('query', function (query) {
+      $scope.books = Book.query({ query: query });
+    })
   });

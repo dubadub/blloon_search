@@ -1,15 +1,17 @@
 
-<div class='discover-section'>
-  <input type="text" ng-model="query">
+<div class='search-section'>
+  <div class="search-section__input">
+    <input class="input-control" type="text" ng-model="query" placeholder="Type to search...">
+  </div>
 
-  <div class='discover-section__content'>
+  <div class='search-section__content'>
     Here are a few of our favourite reads. To browse our full range,
     <a class="link--plain" href="http://staging.blloon.com/dl">
       download Blloon
     </a>
     .
   </div>
-  <div class='discover-section__highlights highlights'>
+  <div class='search-section__highlights highlights'>
     <div class='feature highlights__box lime' ng-repeat="book in books">
       <a class="book" href="">
         <div class='book-cover' ng-style="{ 'background-image': url('{{book.medium_cover_image_url}}')}">
@@ -17,7 +19,7 @@
       </a>
     </div>
   </div>
-  <div class='discover-section__cta'>
+  <div class='search-section__cta'>
     <a class="btn btn--outline" href="http://staging.blloon.com/dl">
       Download Blloon
     </a>

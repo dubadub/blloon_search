@@ -1,0 +1,211 @@
+//colors
+$gray: gray;
+$white: white;
+$color_mine_shaft_approx: #333333;
+$color_bon_jour_approx: #e0e0e0;
+$color_tuatara_approx: #343434;
+$color_masala_approx: #3e3e3e;
+$color_cape_cod_approx: #434343;
+$color_gravel_approx: #484848;
+$color_manz_approx: #dae76c;
+$color_green_haze_approx: #18a566;
+$color_turbo_approx: #ffeb00;
+$color_kingfisher_daisy_approx: #3c0091;
+$color_tree_poppy_approx: #f59c1e;
+$color_alizarin_crimson_approx: #ed2d32;
+$black_8: rgba(0,0,0,0.08);
+
+.search-section {
+    text-align: center;
+    .highlights {
+        margin: 1.0em auto 2.0em;
+        overflow: hidden;
+        *zoom: 1;
+        .highlights__box {
+            width: 9.625em;
+            height: 14em;
+            padding: 0.4375em 0.4375em;
+            &.two-x {
+                width: 19.25em;
+                .book:first-child {
+                    margin-right: 0.875em;
+                }
+                &.two-y .book {
+                    &:nth-child(1) {
+                        margin-right: 0.875em;
+                        margin-bottom: 0.875em;
+                    }
+                    &:nth-child(2) {
+                        margin-bottom: 0.875em;
+                    }
+                }
+            }
+            &.feature {
+                width: 19.25em;
+                height: 28em;
+                .book {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &.four-x {
+                width: 38.5em;
+                .book {
+                    margin-left: 0.875em;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+            &.two-y {
+                height: 28em;
+                .book:first-child {
+                    margin-bottom: 0.875em;
+                }
+            }
+            .fill {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .book {
+            width: 8.75em;
+            height: 13.125em;
+        }
+    }
+    .highlights__box {
+        display: inline-block;
+        :nth-child(6n+1) .book-cover {
+            background-color: $color_mine_shaft_approx;
+        }
+        :nth-child(6n+2) .book-cover {
+            background-color: $color_tuatara_approx;
+        }
+        :nth-child(6n+3) .book-cover {
+            background-color: $color_tuatara_approx;
+        }
+        :nth-child(6n+4) .book-cover {
+            background-color: $color_masala_approx;
+        }
+        :nth-child(6n+5) .book-cover {
+            background-color: $color_cape_cod_approx;
+        }
+        :nth-child(6n+6) .book-cover {
+            background-color: $color_gravel_approx;
+        }
+    }
+    .book {
+        display: block;
+        //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: transform 0.1s ease;
+        &:hover {
+            //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: scale(1.027);
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    .feature {
+        .book {
+            padding: 1.75em;
+            background-color: $color_kingfisher_daisy_approx;
+        }
+        .book-cover {
+            //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            box-shadow: 0 0 0.875em $black_8;
+            background-color: transparent;
+        }
+        &.lime .book {
+            background-color: $color_manz_approx;
+        }
+        &.green .book {
+            background-color: $color_green_haze_approx;
+        }
+        &.gold .book {
+            background-color: $color_turbo_approx;
+        }
+        &.purple .book {
+            background-color: $color_kingfisher_daisy_approx;
+        }
+        &.orange .book {
+            background-color: $color_tree_poppy_approx;
+        }
+        &.red .book {
+            background-color: $color_alizarin_crimson_approx;
+        }
+    }
+    .book-cover {
+        width: 100%;
+        height: 100%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+.search-section__input {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 1.0em;
+
+    .input-control {
+        color: $color_mine_shaft_approx;
+        font-size: 85%;
+        padding: 0.3em 0.75em;
+        -webkit-border-radius: 625em;
+        -moz-border-radius: 625em;
+        border-radius: 625em;
+        border: 0;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        &:focus {
+            box-shadow: 0 0 1px 1px red;
+        }
+    }
+
+}
+
+.search-section__content {
+    padding: 0 1.6em;
+    line-height: 1.1;
+    a {
+        display: inline-block;
+    }
+}
+.search-section__cta {
+    margin-bottom: 2.0em;
+}
+@media (max-width: 48.0625em) {
+    .search-section .highlights {
+        width: 38.5em;
+    }
+}
+@media (min-width: 48.125em) and (max-width: 67.3125em) {
+    .search-section .highlights {
+        width: 38.5em;
+    }
+}
+@media (min-width: 67.375em) {
+    .search-section .highlights {
+        width: 57.75em;
+    }
+}
+.search-section__heading h2 {
+    position: relative;
+    line-height: 1.2;
+    padding-bottom: 0.4em;
+    margin-bottom: 0.48em;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        height: 1px;
+        width: 1.66667em;
+        margin-left: -0.83333em;
+        background-color: $color_bon_jour_approx;
+    }
+}
