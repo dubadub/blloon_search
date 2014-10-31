@@ -1,6 +1,6 @@
 
 set :application, 'blloon_search'
-set :repo_url, 'git@github.com:dubadub/bloon_search_compiled.git'
+set :repo_url, 'git@github.com:dubadub/blloon_search_compiled.git'
 set :deploy_to, '/srv/www/blloon_search'
 
 desc 'Gets uptime'
