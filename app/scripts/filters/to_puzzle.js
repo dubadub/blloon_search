@@ -9,7 +9,7 @@
  * Filter in the blloonSearchApp.
  */
 angular.module('blloonSearchApp')
-  .filter('toPuzzle', function ($cacheFactory) {
+  .filter('toPuzzle', function ($cacheFactory, blloonConfig, lodash) {
     var arrayCache = $cacheFactory('toPuzzle'),
       pattern = [
         2, 1, 2, 2, 2,
@@ -20,24 +20,43 @@ angular.module('blloonSearchApp')
         2, 2, 2, 2, 1
       ];
 
+    function calculateDigest (arr) {
+      if (arr === undefined) { return; }
+
+      return lodash.pluck(arr.slice(0, blloonConfig.perPage), 'udid').join();
+    }
+
     return function (input) {
+      if (input.length === 0) { return input; }
 
       var output = [], cursor = 0, index = 0, cachedOutput,
-        jsonArr = JSON.stringify(input);
+        digest = calculateDigest(input),
 
-      while (index < input.length) {
+        /**
+         * Create subarrays only for first page to avoid flickering
+         */
+        partsCount = input.length <= blloonConfig.perPage ? input.length : blloonConfig.perPage;
+
+      while (index < partsCount) {
         output.push(input.slice(index, index + pattern[cursor]));
         index  += pattern[cursor];
         cursor += 1;
       }
 
-      cachedOutput = arrayCache.get(jsonArr);
+      cachedOutput = arrayCache.get(digest);
 
-      if (JSON.stringify(cachedOutput) === JSON.stringify(output)) {
+      if (calculateDigest(cachedOutput) === calculateDigest(output)) {
+        if (input.length > blloonConfig.perPage) {
+          cachedOutput = cachedOutput.concat(input.slice(blloonConfig.perPage));
+        }
         return cachedOutput;
       }
 
-      arrayCache.put(jsonArr, output);
+      arrayCache.put(digest, output);
+
+      if (input.length > blloonConfig.perPage) {
+        output = output.concat(input.slice(blloonConfig.perPage));
+      }
 
       return output;
     };

@@ -5,7 +5,19 @@
     <title>Blloon Coding Exercise: Web Search Challenge</title>
     <meta name="description" content="A web-app that allows users to search for books using the blloon books API.">
     <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href='/images/favicons/apple-touch-icon-57x57.png' rel='apple-touch-icon' sizes='57x57'>
+    <link href='/images/favicons/apple-touch-icon-114x114.png' rel='apple-touch-icon' sizes='114x114'>
+    <link href='/images/favicons/apple-touch-icon-72x72.png' rel='apple-touch-icon' sizes='72x72'>
+    <link href='/images/favicons/apple-touch-icon-144x144.png' rel='apple-touch-icon' sizes='144x144'>
+    <link href='/images/favicons/apple-touch-icon-60x60.png' rel='apple-touch-icon' sizes='60x60'>
+    <link href='/images/favicons/apple-touch-icon-120x120.png' rel='apple-touch-icon' sizes='120x120'>
+    <link href='/images/favicons/apple-touch-icon-76x76.png' rel='apple-touch-icon' sizes='76x76'>
+    <link href='/images/favicons/apple-touch-icon-152x152.png' rel='apple-touch-icon' sizes='152x152'>
+    <link href='/images/favicons/favicon-196x196.png' rel='icon' sizes='196x196' type='image/png'>
+    <link href='/images/favicons/favicon-160x160.png' rel='icon' sizes='160x160' type='image/png'>
+    <link href='/images/favicons/favicon-96x96.png' rel='icon' sizes='96x96' type='image/png'>
+    <link href='/images/favicons/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
+    <link href='/images/favicons/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
@@ -48,14 +60,16 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
     <script src="bower_components/ng-debounce/angular-debounce.js"></script>
+    <script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -63,8 +77,10 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/services/book.js"></script>
-        <script src="scripts/directives/background-image.js"></script>
+        <script src="scripts/directives/background_image.js"></script>
         <script src="scripts/filters/to_puzzle.js"></script>
+        <script src="scripts/services/blloon_config.js"></script>
+        <script src="scripts/directives/books_block.js"></script>
         <!-- endbuild -->
 </body>
 </html>

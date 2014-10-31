@@ -42,7 +42,7 @@ body {
     box-sizing: border-box;
 }
 
-.logo,.panel,.pull-wrap,.freemium__ratio__slider__mark {
+.logo {
     -webkit-box-sizing: content-box;
     -moz-box-sizng: content-box;
     -webkit-box-sizing: content-box;
@@ -68,12 +68,12 @@ body {
 }
 
 .header {
-  width: 100%;
-  min-width: 320px;
-  height: 3.83333em;
   position: absolute;
   top: 0;
   left: 0;
+  height: 3.83333em;
+  width: 100%;
+  min-width: 320px;
   overflow: hidden;
   z-index: 100;
   -webkit-transition: background-color 150ms, -webkit-transform 150ms;
@@ -113,6 +113,47 @@ body {
     max-width: none;
     width: 8.39506em;
     height: 2.77778em;
+}
+
+a.link--plain {
+    border-bottom-color: inherit;
+    color: inherit;
+    &:hover, &:hover, &:active, &:focus {
+        opacity: 0.8;
+        border-bottom-color: transparent;
+    }
+}
+
+.btn {
+    border: none;
+    outline: none;
+    color: white;
+    display: inline-block;
+    padding: 0.73667em 2em 0.86667em 2em;
+}
+
+@media (min-width: 65.625em) {
+    .btn {
+        padding-left: 2.66667em;
+        padding-right: 2.66667em;
+    }
+}
+
+.btn--outline {
+    border: white 3px solid;
+    background-color: transparent;
+    color: white;
+    -webkit-transition: 875ms cubic-bezier(0.580, -0.550, 0.265, 1.550) margin-left;
+    -moz-transition: 875ms cubic-bezier(0.580, -0.550, 0.265, 1.550) margin-left;
+    -ms-transition: 875ms cubic-bezier(0.580, -0.550, 0.265, 1.550) margin-left;
+    -o-transition: 875ms cubic-bezier(0.580, -0.550, 0.265, 1.550) margin-left;
+    transition: 875ms cubic-bezier(0.580, -0.550, 0.265, 1.550) margin-left;
+    &.loading-more-add {
+      margin-left: -100px;
+    }
+    &.loading-more {
+      margin-left: 0px;
+    }
 }
 
 

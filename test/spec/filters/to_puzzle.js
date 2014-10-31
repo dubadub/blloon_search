@@ -11,9 +11,16 @@ describe('Filter: toPuzzle', function () {
     toPuzzle = $filter('toPuzzle');
   }));
 
-  it('should return the input prefixed with "toPuzzle filter:"', function () {
-    var text = 'angularjs';
-    expect(toPuzzle(text)).toBe('toPuzzle filter: ' + text);
+  it('should return the input array with subarrays', function () {
+    var arr = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 },
+      { id: 7 }, { id: 8 }, { id: 9 }];
+    expect(toPuzzle(arr)).toEqual([
+      [ { id : 1 }, { id : 2 } ],
+      [ { id : 3 } ],
+      [ { id : 4 }, { id : 5 } ],
+      [ { id : 6 }, { id : 7 } ],
+      [ { id : 8 }, { id : 9 } ]
+    ]);
   });
 
 });

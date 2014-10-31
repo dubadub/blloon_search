@@ -17,7 +17,6 @@ $black_8: rgba(0,0,0,0.08);
 
 .search-section {
     text-align: center;
-    font-family: "Tiempos", Georgia, serif;
     letter-spacing: -0.02em;
     line-height: 1.65;
     .highlights {
@@ -99,10 +98,8 @@ $black_8: rgba(0,0,0,0.08);
     }
     .book {
         display: block;
-        //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
         transition: transform 0.1s ease;
         &:hover {
-            //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
             transform: scale(1.027);
         }
         img {
@@ -116,7 +113,6 @@ $black_8: rgba(0,0,0,0.08);
             background-color: $color_kingfisher_daisy_approx;
         }
         .book-cover {
-            //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
             box-shadow: 0 0 0.875em $black_8;
             background-color: transparent;
         }
@@ -157,6 +153,7 @@ $black_8: rgba(0,0,0,0.08);
         color: $color_mine_shaft_approx;
         font-size: 85%;
         padding: 0.3em 0.75em;
+        width: 300px;
         -webkit-border-radius: 625em;
         -moz-border-radius: 625em;
         border-radius: 625em;
@@ -174,12 +171,15 @@ $black_8: rgba(0,0,0,0.08);
 .search-section__content {
     padding: 0 1.6em;
     line-height: 1.1;
+
+    font-family: "Tiempos", Georgia, serif;
     a {
         display: inline-block;
     }
 }
 .search-section__cta {
     margin-bottom: 2.0em;
+    position: relative;
 }
 @media (max-width: 48.0625em) {
     .search-section .highlights {

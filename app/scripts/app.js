@@ -10,22 +10,21 @@
  */
 angular
   .module('blloonSearchApp', [
-    'debounce',
     'ngAnimate',
     'ngResource',
     'ngRoute',
     'ngSanitize',
+    'ngLodash',
+    'debounce',
+    'infinite-scroll',
     'ngTouch'
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+        controller: 'MainCtrl',
+        reloadOnSearch: false
       })
       .otherwise({
         redirectTo: '/'

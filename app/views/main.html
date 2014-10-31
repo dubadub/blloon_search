@@ -9,23 +9,18 @@
       placeholder="Type to search...">
   </div>
 
-  <div class='search-section__content'>
-    Here are a few of our favourite reads.
+  <div class="search-section__content">
+    For example, <a class="link--plain" href="#/?search=Life">Life, the Universe and Everything</a>.
   </div>
 
-  <div class='search-section__highlights highlights'>
-    <div class='highlights__box' ng-repeat="booksGroup in books | toPuzzle" ng-class="{ 'two-y': booksGroup.length == 2, 'feature lime': booksGroup.length == 1 }">
-      <a class="book" href="" ng-repeat="book in booksGroup">
-        <div class='book-cover' background-image="booksGroup.length == 1 ? book.medium_cover_image_url : book.small_cover_image_url">
-        </div>
-      </a>
+  <div class="search-section__highlights highlights">
+    <div class="highlights__box" ng-repeat="booksBlock in books | toPuzzle" books-block="booksBlock"></div>
+  </div>
+
+  <div class="search-section__cta" ng-show="query" infinite-scroll="loadMore()" infinite-scroll-disabled="!canLoadMore()" >
+    <div class="btn btn--outline" ng-class="{ 'loading-more': isLoading }">
+      Loading...
     </div>
-  </div>
-
-  <div class='search-section__cta'>
-    <a class="btn btn--outline" href="http://staging.blloon.com/dl">
-      Download Blloon
-    </a>
   </div>
 </div>
 
