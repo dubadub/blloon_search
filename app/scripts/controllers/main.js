@@ -9,7 +9,7 @@
  */
 angular.module('blloonSearchApp')
   .controller('MainCtrl', function ($location, $scope, blloonConfig, Book) {
-    var totalCount = 84703, page = 0;
+    var totalCount = 130, page = 0;
 
     $scope.query = $location.search().search || '';
     $scope.books = [];
@@ -21,18 +21,25 @@ angular.module('blloonSearchApp')
       });
     });
 
+    /**
+    * Infinit scroll
+    */
+
     $scope.loadMore = function () {
       $scope.isLoading = true;
-      Book.query({ query: $scope.query, page: page + 1 }, function (books) {
+      Book.query({ query: $scope.query, page: ++page }, function (books) {
         $scope.isLoading = false;
-        page++;
         $scope.books = $scope.books.concat(books);
       });
     };
 
     $scope.canLoadMore = function () {
-      return $scope.books.length && !$scope.isLoading && (page + 1) * blloonConfig.perPage < totalCount;
+      return $scope.books.length && !$scope.isLoading && $scope.isMoreAvailiable();
     };
+
+    $scope.isMoreAvailiable = function () {
+      return (page + 1) * blloonConfig.perPage < totalCount;
+    }
 
     /**
     * Two-way binding between URL search parameter and $scope.query.

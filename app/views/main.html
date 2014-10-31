@@ -4,23 +4,29 @@
   <div class="search-section__input">
     <input class="input-control"
       debounce="500"
-      type="text"
       ng-model="query"
-      placeholder="Type to search...">
+      placeholder="Type to search..."
+      type="text">
   </div>
 
   <div class="search-section__content">
-    For example, <a class="link--plain" href="#/?search=Life">Life, the Universe and Everything</a>.
+    For example, <a class="link--plain" href="#/?search=Life, the Universe and Everything">Life, the Universe and Everything</a>.
   </div>
 
   <div class="search-section__highlights highlights">
-    <div class="highlights__box" ng-repeat="booksBlock in books | toPuzzle" books-block="booksBlock"></div>
+    <div class="highlights__box"
+      ng-repeat="booksBlock in books | toPuzzle"
+      books-block="booksBlock"></div>
   </div>
 
-  <div class="search-section__cta" ng-show="query" infinite-scroll="loadMore()" infinite-scroll-disabled="!canLoadMore()" >
-    <div class="btn btn--outline" ng-class="{ 'loading-more': isLoading }">
-      Loading...
-    </div>
+  <div class="search-section__cta"
+    ng-show="query"
+    infinite-scroll="loadMore()"
+    infinite-scroll-disabled="!canLoadMore()"
+    infinite-scroll-distance="1">
+    <div class="btn btn--outline"
+      ng-class="{ 'loading-more': isLoading }"
+      ng-bind="isLoading ? 'Loading...' : 'That\'s it!' "></div>
   </div>
 </div>
 

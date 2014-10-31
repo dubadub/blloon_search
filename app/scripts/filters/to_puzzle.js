@@ -5,7 +5,7 @@
  * @name blloonSearchApp.filter:toPuzzle
  * @function
  * @description
- * # toPuzzle
+ * # toPuzzle is a filter that groups elements of flat array in some pattern.
  * Filter in the blloonSearchApp.
  */
 angular.module('blloonSearchApp')

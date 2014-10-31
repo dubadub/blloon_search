@@ -8,57 +8,56 @@
  */
 angular.module('blloonSearchApp')
   .directive('booksBlock', function ($compile) {
-    var twoYTemplate = '<div class="highlights__box two-y"><a class="book" href="" ng-repeat="book in booksBlock"><div class="book-cover" background-image="book.small_cover_image_url"></div></a></div>';
-    var featureTemplate = '<div class="highlights__box feature {{booksBlock[0].brand_color}}"><a class="book" href=""><div class="book-cover" background-image="booksBlock[0].medium_cover_image_url"></div></a></div>';
-    var defaultTemplate = '<div class="highlights__box"><a class="book" href=""><div class="book-cover" background-image="booksBlock.small_cover_image_url"></div></a></div>';
+    var twoYTemplate = '<a class="book" href="" ng-repeat="book in booksBlock"><div class="book-cover" background-image="book.small_cover_image_url"></div></a>',
+     featureTemplate = '<a class="book" href=""><div class="book-cover" background-image="booksBlock[0].medium_cover_image_url"></div></a>',
+     defaultTemplate = '<a class="book" href=""><div class="book-cover" background-image="booksBlock.small_cover_image_url"></div></a>';
 
     var getTemplate = function(booksBlock) {
-        var template = '';
+      var template = '';
 
-        switch (booksBlock.length) {
-          case 1:
-            template = featureTemplate;
-            break;
-          case 2:
-            template = twoYTemplate;
-            break;
-          case undefined:
-            template = defaultTemplate;
-            break;
-        }
+      switch (booksBlock.length) {
+        case 1:
+          template = featureTemplate;
+          break;
+        case 2:
+          template = twoYTemplate;
+          break;
+        case undefined:
+          template = defaultTemplate;
+          break;
+      }
 
-        return template;
+      return template;
     };
 
     var getClass = function(booksBlock) {
-        var clazz = '';
+      var clazz = '';
 
-        switch (booksBlock.length) {
-          case 1:
-            clazz = 'feature ' + booksBlock[0].brand_color;
-            break;
-          case 2:
-            clazz = 'two-y';
-            break;
-        }
+      switch (booksBlock.length) {
+        case 1:
+          clazz = 'feature ' + booksBlock[0].brand_color;
+          break;
+        case 2:
+          clazz = 'two-y';
+          break;
+      }
 
-        return clazz;
+      return clazz;
     };
 
     var linker = function(scope, element) {
-        var template = getTemplate(scope.booksBlock),
-            clazz = getClass(scope.booksBlock);
+      var template = getTemplate(scope.booksBlock),
+             clazz = getClass(scope.booksBlock);
 
-        element.html(template).addClass(clazz).show();
-
-        $compile(element.contents())(scope);
+      element.html(template).addClass(clazz).show();
+      $compile(element.contents())(scope);
     };
 
     return {
-        restrict: 'A',
-        link: linker,
-        scope: {
-            booksBlock: '='
-        }
+      restrict: 'A',
+      link: linker,
+      scope: {
+          booksBlock: '='
+      }
     };
   });
