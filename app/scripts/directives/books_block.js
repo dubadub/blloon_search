@@ -8,9 +8,9 @@
  */
 angular.module('blloonSearchApp')
   .directive('booksBlock', function ($compile) {
-    var twoYTemplate = '<a class="book" href="" ng-repeat="book in booksBlock"><div class="book-cover" background-image="book.small_cover_image_url"></div></a>',
-     featureTemplate = '<a class="book" href=""><div class="book-cover" background-image="booksBlock[0].medium_cover_image_url"></div></a>',
-     defaultTemplate = '<a class="book" href=""><div class="book-cover" background-image="booksBlock.small_cover_image_url"></div></a>';
+    var twoYTemplate = '<a class="book" href="" data-udid="{{book.udid}}" ng-repeat="book in booksBlock"><div class="book-cover" background-image="book.small_cover_image_url"></div></a>',
+     featureTemplate = '<a class="book" data-udid="{{booksBlock[0].udid}}" href=""><div class="book-cover" background-image="booksBlock[0].medium_cover_image_url"></div></a>',
+     defaultTemplate = '<a class="book" data-udid="{{booksBlock.udid}}" href=""><div class="book-cover" background-image="booksBlock.small_cover_image_url"></div></a>';
 
     var getTemplate = function(booksBlock) {
       var template = '';

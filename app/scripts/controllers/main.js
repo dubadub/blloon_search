@@ -16,8 +16,9 @@ angular.module('blloonSearchApp')
 
     $scope.$watch('query', function (query) {
       $scope.isLoading = true;
-      $scope.books = Book.query({ query: query, page: page = 0 }, function (books) {
+      $scope.books = Book.query({ query: query, page: page = 0 }, function (books, headers) {
         $scope.isLoading = false;
+        totalCount = headers('total');
       });
     });
 
