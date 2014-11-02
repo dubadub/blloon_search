@@ -14,7 +14,11 @@
     "normalize.css": "~3.0.2",
     "ngInfiniteScroll": "~1.1.2",
     "ng-debounce": "~0.1.5",
-    "ng-lodash": "~0.0.2"
+    "ng-lodash": "~0.0.2",
+    "angular-ui-router": "~0.2.11",
+    "ui-router-extras": "~0.0.10",
+    "angular-bootstrap": "~0.11.2",
+    "angular-truncate": "*"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.0",

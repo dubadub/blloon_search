@@ -10,6 +10,12 @@
 angular.module('blloonSearchApp')
   .factory('Book', function ($resource, blloonConfig) {
     return $resource(
-      'http://turbine-staging-eu.herokuapp.com/books?q=:query&per_page=' + blloonConfig.perPage
+      'http://turbine-staging-eu.herokuapp.com/books/:bookId', { bookId: '@udid' }, {
+        query: {
+          params: { per_page: blloonConfig.perPage },
+          isArray: true
+        }
+      }
+
     );
   });

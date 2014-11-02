@@ -3,6 +3,7 @@
 
   <div class="search-section__input">
     <input class="input-control"
+      autofocus
       debounce="500"
       ng-model="query"
       placeholder="Type to search..."
@@ -10,7 +11,7 @@
   </div>
 
   <div class="search-section__content">
-    For example, <a class="link--plain" href="#/?search=Life, the Universe and Everything">Life, the Universe and Everything</a>.
+    For example, <a class="link--plain" ui-sref="main.search({ search: 'Life, the Universe and Everything'})">Life, the Universe and Everything</a>.
   </div>
 
   <div class="search-section__highlights highlights">
@@ -25,8 +26,10 @@
     infinite-scroll-disabled="!canLoadMore()"
     infinite-scroll-distance="1">
     <div class="btn btn--outline"
-      ng-class="{ 'loading-more': isLoading }"
-      ng-bind="isLoading ? 'Loading...' : 'That\'s it!' "></div>
+      ng-class="{ 'loading-more': isLoading }">
+      <span ng-bind="isLoading ? 'Loading...' : 'That\'s it!' "></span>
+      <span ng-show="!isLoading && books.length == 0">Nothing was found.</span>
+    </div>
   </div>
 </div>
 

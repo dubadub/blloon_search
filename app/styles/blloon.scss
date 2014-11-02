@@ -656,27 +656,27 @@ input[type=checkbox],input[type=radio] {
 }
 
 @font-face {
-    font-family:"Tiempos";src:url("TiemposTextWeb-Regular.woff") format("woff"),url("TiemposTextWeb-Regular.ttf") format("truetype");font-weight:normal;font-style:normal;
+    font-family:"Tiempos";src:url("fonts/TiemposTextWeb-Regular.woff") format("woff"),url("fonts/TiemposTextWeb-Regular.ttf") format("truetype");font-weight:normal;font-style:normal;
 }
 
 @font-face {
-    font-family:"Tiempos";src:url("TiemposTextWeb-RegularItalic.woff") format("woff"),url("TiemposTextWeb-RegularItalic.ttf") format("truetype");font-weight:normal;font-style:italic;
+    font-family:"Tiempos";src:url("fonts/TiemposTextWeb-RegularItalic.woff") format("woff"),url("fonts/TiemposTextWeb-RegularItalic.ttf") format("truetype");font-weight:normal;font-style:italic;
 }
 
 @font-face {
-    font-family:"Metric";src:url("MetricWeb-Light.woff") format("woff"),url("MetricWeb-Light.ttf") format("truetype");font-weight:300;font-style:normal;
+    font-family:"Metric";src:url("fonts/MetricWeb-Light.woff") format("woff"),url("fonts/MetricWeb-Light.ttf") format("truetype");font-weight:300;font-style:normal;
 }
 
 @font-face {
-    font-family:"Metric";src:url("MetricWeb-Medium.woff") format("woff"),url("MetricWeb-Medium.ttf") format("truetype");font-weight:normal;font-style:normal;
+    font-family:"Metric";src:url("fonts/MetricWeb-Medium.woff") format("woff"),url("fonts/MetricWeb-Medium.ttf") format("truetype");font-weight:normal;font-style:normal;
 }
 
 @font-face {
-    font-family:"Metric";src:url("MetricWeb-Black.woff") format("woff"),url("MetricWeb-Black.ttf") format("truetype");font-weight:bold;font-style:normal;
+    font-family:"Metric";src:url("fonts/MetricWeb-Black.woff") format("woff"),url("fonts/MetricWeb-Black.ttf") format("truetype");font-weight:bold;font-style:normal;
 }
 
 @font-face {
-    font-family:"Metric";src:url("MetricWeb-LightItalic.woff") format("woff"),url("MetricWeb-LightItalic.ttf") format("truetype");font-weight:normal;font-style:italic;
+    font-family:"Metric";src:url("fonts/MetricWeb-LightItalic.woff") format("woff"),url("fonts/MetricWeb-LightItalic.ttf") format("truetype");font-weight:normal;font-style:italic;
 }
 
 .baseline {
@@ -3094,7 +3094,7 @@ tr:hover .table__reveal-content {
 }
 
 .icon--more {
-    background-image: url("read-more.svg");
+    background-image: url("../images/read-more.svg");
 }
 
 .no-svg .icon--more {
@@ -3247,23 +3247,23 @@ tr:hover .table__reveal-content {
     height: 2.77778em;
 }
 
-.modal {
-    position: fixed;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100%;
-    height: 100%;
-    visibility: hidden;
-    background-color: white;
-    pointer-events: none;
-    z-index: 20;
-    position: fixed;
-    overflow: hidden;
-    color: #333333;
-    opacity: 0;
-    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-}
+// .modal {
+//     position: fixed;
+//     top: 0 !important;
+//     left: 0 !important;
+//     width: 100%;
+//     height: 100%;
+//     visibility: hidden;
+//     background-color: white;
+//     pointer-events: none;
+//     z-index: 20;
+//     position: fixed;
+//     overflow: hidden;
+//     color: #333333;
+//     // opacity: 0;
+//     -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+//     transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+// }
 
 @media (max-width: 31.1875em) {
     .modal {
