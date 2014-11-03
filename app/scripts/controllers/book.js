@@ -39,17 +39,17 @@ angular.module('blloonSearchApp')
         function adjust () {
           $timeout(function () {
             var boxWidth = box[0].offsetWidth,
-              viewportHeight = $window.innerHeight - element.offset().top,
+              viewportHeight = $window.innerHeight - element.offset().top + $window.scrollY,
               fluidPadding = (viewportHeight/boxWidth) * 100;
-              console.log(">>>>>", fluidPadding)
+
             // give box fluid padding to make responsive
             element.css( { paddingTop: fluidPadding + '%' });
-          });
+          },100);
         }
 
         scope.$watch(function () {
-          return box.height();
-        }, adjust);
+          return [box.height(),element.offset().top, element.height()];
+        }, adjust, true);
 
         angular.element($window).on('resize', adjust);
       }

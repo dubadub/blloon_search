@@ -117,38 +117,55 @@ button.close {
   transition: opacity .15s linear;
 }
 
+
+.book--cover-details-modal {
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in;
+
+      height: 1200px;
+      -webkit-transition: height 0.5s ease-in;
+      transition: height 0.5s ease-in;
+
+}
+
+.in .book--cover-details-modal {
+  opacity: 1;
+  height: auto;
+}
+
 @media (min-height: 21.75em) {
-  .book--cover-details-modal img {
+  .in .book--cover-details-modal img {
     height: 200px;
   }
 }
 
 @media (min-height: 34.25em) {
-  .book--cover-details-modal img {
+  .in .book--cover-details-modal img {
     height: 250px;
   }
 }
 
 @media (min-height: 46.75em) {
-  .book--cover-details-modal img {
+  .in .book--cover-details-modal img {
     height: 350px;
   }
 }
 
 @media (min-height: 59.25em) {
-  .book--cover-details-modal img {
+  .in .book--cover-details-modal img {
     height: 450px;
   }
 }
 
 @media (min-height: 71.75em) {
-  .book--cover-details-modal img {
+  .in .book--cover-details-modal img {
     height: 550px;
   }
 }
 
 @media (min-height: 84.25em) {
-  .book--cover-details-modal img {
+  .in .book--cover-details-modal img {
     height: 650px;
   }
 }
