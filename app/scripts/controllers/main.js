@@ -18,7 +18,7 @@ angular.module('blloonSearchApp')
         $scope.isLoading = false;
         totalCount = headers('total');
       });
-    }
+    };
 
     $scope.$watch('query', function (query) {
       if (query) {

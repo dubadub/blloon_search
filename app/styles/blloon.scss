@@ -4025,12 +4025,6 @@ tr:hover .table__reveal-content {
     transition: background-color 0.2s ease-in;
 }
 
-.book--cover-details {
-    opacity: 0;
-    -webkit-transition: opacity 0.2s ease-in;
-    transition: opacity 0.2s ease-in;
-}
-
 @media (min-height: 18.75em) {
     .book--cover-details img {
         height: 200px;

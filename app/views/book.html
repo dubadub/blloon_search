@@ -1,8 +1,8 @@
-<div class='viewport-h viewport-h--min text-invert bg--dark' id='book-detail-bg'>
+<div class='viewport-h viewport-h--min text-invert bg--dark' id='book-detail-bg' adjust-viewport-height=".book--cover-details-modal">
   <div class='vcenter'>
     <div class='vcenter__wrap'>
       <div class="close" ng-click="close()"></div>
-      <div class='vcenter__inner book-cover book--cover-details' style="opacity: 1">
+      <div class='vcenter__inner book-cover book--cover-details-modal'>
         <img alt="{{book.title}}" class="centered " ng-src="{{book.large_cover_image_url}}" />
         <div class='block block--s'>
           <div class='zero-block--bottom'>
@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <a class='read-more' href='#more' id='js-read-more'>
+    <a class='read-more' href='' scroll-to="#details" offset="0" container=".modal">
       <i class='icon icon--more'>
       </i>
       <span class='is-hidden'>
@@ -28,7 +28,7 @@
     </a>
   </div>
 </div>
-<div class='content'>
+<div id="details" class='content'>
   <div class='block block--l'>
     <div class='container'>
       <div class='copy-size copy-style copy-baseline'>

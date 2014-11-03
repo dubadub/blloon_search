@@ -117,4 +117,38 @@ button.close {
   transition: opacity .15s linear;
 }
 
+@media (min-height: 21.75em) {
+  .book--cover-details-modal img {
+    height: 200px;
+  }
+}
 
+@media (min-height: 34.25em) {
+  .book--cover-details-modal img {
+    height: 250px;
+  }
+}
+
+@media (min-height: 46.75em) {
+  .book--cover-details-modal img {
+    height: 350px;
+  }
+}
+
+@media (min-height: 59.25em) {
+  .book--cover-details-modal img {
+    height: 450px;
+  }
+}
+
+@media (min-height: 71.75em) {
+  .book--cover-details-modal img {
+    height: 550px;
+  }
+}
+
+@media (min-height: 84.25em) {
+  .book--cover-details-modal img {
+    height: 650px;
+  }
+}
