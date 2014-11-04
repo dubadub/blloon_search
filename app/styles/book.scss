@@ -119,14 +119,9 @@ button.close {
 
 
 .book--cover-details-modal {
-    opacity: 0;
-    -webkit-transition: opacity 0.2s ease-in;
-    transition: opacity 0.2s ease-in;
-
-      height: 1200px;
-      -webkit-transition: height 0.5s ease-in;
-      transition: height 0.5s ease-in;
-
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
 }
 
 .in .book--cover-details-modal {
