@@ -28,6 +28,10 @@ module.exports = function(config) {
       'bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js',
       'bower_components/ng-debounce/angular-debounce.js',
       'bower_components/ng-lodash/build/ng-lodash.js',
+      'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+      'bower_components/angular-truncate/src/truncate.js',
+      'bower_components/angular-ui-router/release/angular-ui-router.js',
+      'bower_components/ui-router-extras/release/ct-ui-router-extras.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
       'test/spec/**/*.js'
