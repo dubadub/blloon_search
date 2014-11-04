@@ -41,10 +41,10 @@ angular.module('blloonSearchApp')
             var boxWidth = box[0].offsetWidth,
               viewportHeight = $window.innerHeight - 3 * parseInt(element.css('fontSize')),
               fluidPadding = (viewportHeight/boxWidth) * 100;
-              console.log(viewportHeight, $window.innerHeight, element.css('fontSize'), $window.scrollY)
+
             // give box fluid padding to make responsive
             element.css( { paddingTop: fluidPadding + '%' });
-          },100);
+          }, 100);
         }
 
         scope.$watchCollection(function () {
