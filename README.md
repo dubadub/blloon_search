@@ -3,7 +3,7 @@ Example of AngularJS application
 
 ## Demo
 
-Checkout demo http://blloon.aleffa.ru/#/
+Checkout demo http://blloon.aleffa.ru
 
 ## Technology stack
 
