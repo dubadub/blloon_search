@@ -1,52 +1,25 @@
-Blloon Coding Exercise: Web Search Challenge
+Example of AngularJS application
 ====================
 
-## Challenge
-Build a web-app that allows users to search for books using the blloon books API.
+## Demo
 
-## Requirements
-As a User I want to be able to
+Checkout demo http://blloon.aleffa.ru/#/
 
-- see a web-app, that has a similar visual style as: http://staging.blloon.com/discover
-- search for books
-- see search results
-- be able to infinitely scroll through results with a 
-- BONUS: see nice details of a book when I click on it
+## Technology stack
 
-## Technologies
+General:
+- AngularJS project on Yeoman;
+- Jasmine + Protractor for testing;
+- Capistrano for deploy.
 
-You can use whatever JavaScript frameworks (or just plain JavaScript, up to you), libraries, template languages, module systems etc. you're familiar with.
+Front-end libraries: 
 
-## CSS-Resources
-
-Feel free to use our CSS if you like. The needed uncompressed CSS can be extracted here:
-
-http://staging.blloon.com
-
-## Data-Source
-
-The following API-Endpoint should be used search books (CORS-settings: *):
-
-http://turbine-production.blloon.com/docs/#!/books/GET_books_format_get_0
-
-## Submission
-Please provide the result in a public git repository.
-
-# What we review
-
-We are looking for elegant solutions and expressive architectures that
-demonstrate your deep understanding of software engineering, speciﬁcally: 	
-
-- Code quality 
-- Application design 
-- Usage of 3rd party libraries. Please explain your choices.	
-- Visual appeal of the implementation
-- Build and deploy process 	
-
-## Show-off 
-We’re eager to enjoy reviewing your work. Bonus points for providing:
-
-- A live demo of the running service
-- A reasonable test coverage
-
-Happy coding!
+- angular-animate;
+- angular-bootstrap: used for book modal window. Angular way of doing things, from Angular team.
+- angular-resource: fetching data from remote server, with promises.
+- angular-truncate;
+- angular-ui-router and ui-router-extras: very powerful solution for routing. I used it for creating Pinterest style navigation experience (freezing search page while displaying book page with updates in address bar, so you can access book directly). Spend some time finding bug that occur during minification of ui-router-extras (https://github.com/dubadub/ui-router-extras/commit/f87ddeedbeab9d74be588336d7f68f074382f051).
+- jquery: actually I don’t want it here, but some modules depend on it.
+- ng-debounce: simple module for debouncing input to make UX better.
+- ng-lodash: ruby like approach to Arrays;
+- ngInfiniteScroll.
